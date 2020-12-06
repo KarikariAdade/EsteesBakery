@@ -240,10 +240,64 @@ $(document).ready(function(){
         }
     }
     main_slider5();
+        /*----------------------------------------------------*/
+    /*  portfolio_isotope
+    /*----------------------------------------------------*/
+    function grid_gallery(){
+        if ( $('.grid_portfolio_area').length ){
+            // Activate isotope in container
+            $(".grid_portfolio_area").imagesLoaded( function() {
+                $(".grid_portfolio_area").isotope({
+                    layoutMode: 'masonry',
+                    percentPosition:true,
+                    columnWidth: 1
+                }); 
+            }); 
+        }
+    }
+    grid_gallery();
     
     /*----------------------------------------------------*/
-    /*  Cake Feature Slider
+    /*  Portfolio Isotope js
     /*----------------------------------------------------*/
+    function portfolio_isotope(){
+        if ( $('.portfolio_filter ul li').length ){
+            // Add isotope click function
+            $(".portfolio_filter ul li").on('click',function(){
+                $(".portfolio_filter ul li").removeClass("active");
+                $(this).addClass("active");
+
+                var selector = $(this).attr("data-filter");
+                $(".grid_portfolio_area").isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 450,
+                        easing: "linear",
+                        queue: false,
+                    }
+                });
+                return false;
+            });
+        }
+    }
+    
+    portfolio_isotope();
+    
+    
+    $( function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 10, 250 ],
+            slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+    
   
     
     /*----------------------------------------------------*/
@@ -274,46 +328,8 @@ $(document).ready(function(){
             $(this).remove();
         });
    
-    
 
-  
-    
-    /*----------------------------------------------------*/
-    /*  Search Popup js
-    /*----------------------------------------------------*/
-    $(document).ready(function() {
-        $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
 
-            fixedContentPos: false,
-            fixedBgPos: true,
-
-            overflowY: 'auto',
-
-            closeBtnInside: true,
-            preloader: false,
-
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-        });
-
-        $('.popup-with-move-anim').magnificPopup({
-            type: 'inline',
-
-            fixedContentPos: false,
-            fixedBgPos: true,
-
-            overflowY: 'auto',
-
-            closeBtnInside: true,
-            preloader: false,
-
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-slide-bottom'
-        });
-    });
     
     /*----------------------------------------------------*/
     /*  Simple LightBox js

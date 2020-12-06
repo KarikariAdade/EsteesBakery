@@ -29,3 +29,11 @@ Route::get('pizza', 'WebsiteController@pizza')->name('website.pizza');
 
 Route::get('pastries', 'WebsiteController@pastries')->name('website.pastries');
 
+Route::get('gallery', 'WebsiteController@gallery')->name('website.gallery');
+
+Route::get('contact', 'WebsiteController@contact')->name('website.contact');
+
+
+// ADMIN ROUTES
+
+Route::get('admin/dashboard', 'Admin\AdminPagesController@dashboard')->name('admin.dashboard');

@@ -15,6 +15,8 @@
 	<!-- <link href="js/animate-css/animate.css" rel="stylesheet"> -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.default.css') }}">
+	<link href="{{ asset('js/magnifc-popup/magnific-popup.css') }}" rel="stylesheet">
+        <link href="{{ asset('js/lightbox/simpleLightbox.css') }}" rel="stylesheet">
 	<style type="text/css">
 		.page-bottom{
 			display: none;
@@ -59,19 +61,34 @@
 						<ul class="navbar-nav justify-content-end">
 							<li><a href="{{ route('website.home') }}">Home</a></li>
 							<li><a href="{{ route('website.about') }}">About Us</a></li>
-							<li><a href="{{ route('website.pastries') }}">Pastries</a></li>
-							<li><a href="{{ route('website.pizza') }}">Pizza</a></li>
-							<li><a href="{{ route('website.cakes') }}">Cakes</a></li>
-						<!-- <li class="dropdown submenu">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+							<li class="dropdown submenu">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pastries</a>
 							<ul class="dropdown-menu">
-								<li><a href="about-us.html">About Us</a></li>
-								<li><a href="our-team.html">Our Chefs</a></li>
-								<li><a href="testimonials.html">Testimonials</a></li>
+								<li><a href="{{ route('website.pastries') }}">Chips</a></li>
+								<li><a href="{{ route('website.pastries') }}">Pie</a></li>
+								<li><a href="{{ route('website.pastries') }}">Category 3</a></li>
 							</ul>
-						</li> -->
-						<li><a href="">Gallery</a></li>
-						<li><a href="">Contact Us</a></li>
+						</li>
+							<li><a href="{{ route('website.pizza') }}">Pizza</a></li>
+							{{-- <li><a href="{{ route('website.cakes') }}">Cakes</a></li> --}}
+							<li class="dropdown submenu">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cakes</a>
+							<ul class="dropdown-menu">
+								<li><a href="{{ route('website.cakes') }}">Birthday Cakes</a></li>
+								<li><a href="{{ route('website.cakes') }}">Wedding Cakes</a></li>
+								<li><a href="{{ route('website.cakes') }}">Cupcakes</a></li>
+							</ul>
+						</li>
+						
+						<li><a href="{{ route('website.gallery') }}">Gallery</a></li>
+						<li><a href="{{ route('website.contact') }}">Contact Us</a></li>
+						<li class="dropdown submenu">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
+							<ul class="dropdown-menu">
+								<li><a href="{{ route('website.cakes') }}">Login</a></li>
+								<li><a href="{{ route('website.cakes') }}">Sign Up</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</nav>
@@ -150,7 +167,11 @@
 <script src="{{ asset('js/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
 <script src="{{ asset('js/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
 <script src="{{ asset('js/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+<script src="{{ asset('js/isotope/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ asset('js/isotope/isotope.pkgd.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/magnifc-popup/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/lightbox/simpleLightbox.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 @stack('script')
 </body>

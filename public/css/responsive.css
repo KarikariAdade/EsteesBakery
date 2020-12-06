@@ -5,6 +5,17 @@
 		top: 0px;
 		transform: translateX(-0%);
 	}
+	.main_menu_two .navbar.navbar-expand-lg .navbar-nav li a{
+		display: block;
+	}
+
+	.main_menu_two .navbar.navbar-expand-lg .navbar-nav > li > a{
+		line-height: 48px !important;
+    border-bottom: 1px solid #dcdcdc;
+	}
+	.main_header_area.navbar_fixed .main_menu_two {
+		overflow-y: scroll !important;
+	}
 	.navbar-light .navbar-toggler{
 		box-shadow: none;
 		outline: none;
@@ -91,7 +102,7 @@
 	.cake_feature_slider.owl-carousel .owl-nav{
   position: absolute !important;
     right: 45% !important;
-    /*top: -113px !important;*/
+    /*top: -113px !important;
     display: block !important;
     /*z-index: 22222222 !important;*/
 }
@@ -164,3 +175,6 @@
   display: block;
 }
 }
+
+
+*/
