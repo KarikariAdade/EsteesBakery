@@ -33,6 +33,10 @@ Route::get('gallery', 'WebsiteController@gallery')->name('website.gallery');
 
 Route::get('contact', 'WebsiteController@contact')->name('website.contact');
 
+Route::get('item/detail', 'WebsiteController@itemDetail')->name('website.item.detail');
+
+
+Route::get('cart', 'WebsiteController@cart')->name('website.cart.index');
 
 // ADMIN ROUTES
 

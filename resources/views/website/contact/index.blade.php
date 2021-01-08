@@ -17,7 +17,7 @@ Taste the Difference
 		</div>
 	</section>
  <!--================Contact Form Area =================-->
-        <section class="contact_form_area mt-5">
+        <section class="contact_form_area">
         	<div class="container">
         		<div class="main_title">
 					<h2>Get In Touch</h2>
@@ -25,7 +25,7 @@ Taste the Difference
 				</div>
        			<div class="row">
        				<div class="col-lg-7">
-       					<form class="row contact_us_form" action="http://galaxyanalytics.net/demos/cake/theme/cake-html/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+       					<form class="row contact_us_form" action="" method="post" id="contactForm">
 							<div class="form-group col-md-6">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Your name">
 							</div>
@@ -39,7 +39,7 @@ Taste the Difference
 								<textarea class="form-control" name="message" id="message" rows="1" placeholder="Wrtie message"></textarea>
 							</div>
 							<div class="form-group col-md-12">
-								<button type="submit" value="submit" class="btn order_s_btn form-control">submit now</button>
+								<button type="submit" value="submit" class="pest_btn order_s_btn form-control">Send Message</button>
 							</div>
 						</form>
        				</div>

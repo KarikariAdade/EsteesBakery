@@ -42,4 +42,14 @@ class WebsiteController extends Controller
     }
 
     // 0px 25px 45px 0px rgba(0, 0, 0, 0.15)
+
+    public function itemDetail()
+    {
+        return view('website.item');
+    }
+
+    public function cart()
+    {
+        return view('website.cart.index');
+    }
 }
