@@ -1,9 +1,9 @@
 @extends('layouts.website.main')
 @section('main-title')
-Taste the Difference
+About Us
 @endsection
 @section('content')
-<section class="page-banner" style="background: url({{ asset('images/home-slider/slider-3.jpg') }});">
+<section class="page-banner" style="background: url({{ asset('images/home-slider/slider-2.jpg') }});">
 		<div class="banner-content">
 			<h1>Contact Us</h1>
 			<ul>
@@ -16,8 +16,8 @@ Taste the Difference
 			</ul>
 		</div>
 	</section>
- <!--================Contact Form Area =================-->
-        <section class="contact_form_area mt-5">
+	<!--================Contact Form Area =================-->
+        <section class="contact_form_area">
         	<div class="container">
         		<div class="main_title">
 					<h2>Get In Touch</h2>
@@ -25,7 +25,7 @@ Taste the Difference
 				</div>
        			<div class="row">
        				<div class="col-lg-7">
-       					<form class="row contact_us_form" action="http://galaxyanalytics.net/demos/cake/theme/cake-html/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+       					<form class="row contact_us_form" action="" method="post" id="contactForm">
 							<div class="form-group col-md-6">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Your name">
 							</div>
@@ -38,19 +38,19 @@ Taste the Difference
 							<div class="form-group col-md-12">
 								<textarea class="form-control" name="message" id="message" rows="1" placeholder="Wrtie message"></textarea>
 							</div>
-							<div class="form-group col-md-12">
-								<button type="submit" value="submit" class="btn order_s_btn form-control">submit now</button>
+							<div class="form-group col-md-4">
+								<button type="submit" value="submit" class="btn form-control pest_btn">Send Message</button>
 							</div>
 						</form>
        				</div>
-       				<div class="col-lg-4 offset-md-1">
+       				<div class="col-lg-4">
        					<div class="contact_details">
        						<div class="contact_d_item">
        							<h3>Address :</h3>
-       							<p>Plot 235, Block K <br /> Agona, Ashanti <br /> Ghana</p>
+       							<p>54B, Tailstoi Town 5238 <br /> La city, IA 522364</p>
        						</div>
        						<div class="contact_d_item">
-       							<h5>Phone : <a href="tel:01372466790">+233 54 887 8922</a></h5>
+       							<h5>Phone : <a href="tel:01372466790">01372.466.790</a></h5>
        							<h5>Email : <a href="">info@esteesbakery.com</a></h5>
        						</div>
        						<div class="contact_d_item">
@@ -63,6 +63,4 @@ Taste the Difference
        			</div>
         	</div>
         </section>
-        <!--================End Contact Form Area =================-->
-        
 @endsection

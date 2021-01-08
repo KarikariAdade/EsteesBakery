@@ -2063,3 +2063,144 @@ display: inline-block !important;
   flex: 0 0 20%;
   max-width: 20%;
 }
+.contact_form_area .main_title {
+  padding-bottom: 55px;
+}
+
+.contact_us_form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact_us_form .form-group:last-child {
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.contact_us_form .form-group input {
+  height: 48px;
+  border-radius: 3px;
+  border: 1px solid #ededed;
+  padding: 0px 20px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.contact_us_form .form-group input.placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group input:-moz-placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group input::-moz-placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group textarea {
+  height: 206px;
+  border-radius: 3px;
+  border: 1px solid #ededed;
+  padding: 20px 20px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.contact_us_form .form-group textarea.placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group textarea:-moz-placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group textarea::-moz-placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group textarea::-webkit-input-placeholder {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+}
+
+.contact_us_form .form-group .order_s_btn {
+  background: #f195b2;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding: 0px 48px;
+}
+
+.contact_details .contact_d_item {
+  margin-bottom: 40px;
+}
+
+.contact_details .contact_d_item:last-child {
+  margin-bottom: 0px;
+}
+
+.contact_details .contact_d_item h3 {
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #3e606b;
+  margin-bottom: 15px;
+}
+
+.contact_details .contact_d_item p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+  line-height: 26px;
+  margin-bottom: 0px;
+}
+
+.contact_details .contact_d_item p + p {
+  margin-top: 10px;
+}
+
+.contact_details .contact_d_item h5 {
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #3e606b;
+}
+
+.contact_details .contact_d_item h5 a {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #797979;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+.contact_details .contact_d_item h5 + h5 {
+  margin-bottom: 0px;
