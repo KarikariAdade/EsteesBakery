@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Member;
+use App\Providers\RouteServiceProvider;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -29,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = 'admin/dashboard';
 
     /**
      * Create a new controller instance.
@@ -39,6 +41,33 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+//         $this->middleware('auth:member');
+    }
+
+    public function showMemberRegisterForm(){
+        return view('client.auth.signup');
+    }
+
+    public function createMember(Request $request){
+        $data = $request->all();
+
+        $rules = [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ];
+
+        $validator = Validator::make($data, $rules);
+
+        if ($validator->fails())
+            return back()->withErrors($validator);
+
+        $member = Member::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended(route('member_login'));
     }
 
     /**

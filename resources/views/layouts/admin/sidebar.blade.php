@@ -166,9 +166,18 @@
                 Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
-                Logout
-              </a>
+                <a class="dropdown-item has-icon text-danger" href="{{ route('logout') }}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fas fa-sign-out-alt"></i>
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+{{--              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>--}}
+{{--                Logout--}}
+{{--              </a>--}}
             </div>
           </li>
         </ul>
@@ -186,7 +195,7 @@
               <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
              <li class="dropdown">
-              <a href="" class="nav-link"><i data-feather="monitor"></i><span>Profile</span></a>
+              <a href="{{ route('admin.profile.index') }}" class="nav-link"><i data-feather="monitor"></i><span>Profile</span></a>
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Email</span></a>
@@ -260,22 +269,17 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-          <a href="">Made with <i class="fa fa-heart"></i> by Bizzle</a></a>
+          <a href="">Made with <i class="fa fa-heart"></i> by Bizzle</a>
         </div>
         <div class="footer-right">
         </div>
       </footer>
     </div>
   </div>
-  <!-- General JS Scripts -->
   <script src="{{ asset('assets/js/app.min.js') }}"></script>
-  <!-- JS Libraies -->
   <script src="{{ asset('assets/bundles/apexcharts/apexcharts.min.js') }}"></script>
-  <!-- Page Specific JS File -->
   <script src="{{ asset('assets/js/page/index.js') }}"></script>
-  <!-- Template JS File -->
   <script src="{{ asset('assets/js/scripts.js') }}"></script>
-  <!-- Custom JS File -->
   <script src="{{ asset('assets/js/custom.js') }}"></script>
 </body>
 </html>

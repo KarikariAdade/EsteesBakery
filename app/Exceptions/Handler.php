@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Exceptions;
+use Auth;
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-use Auth;
-use Exception;
-use Illuminate\Auth\AuthenticationException;
+
 
 class Handler extends ExceptionHandler
 {
@@ -51,8 +51,17 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, Throwable $exception)
+    public function unauthenticated($request, AuthenticationException $exception): \Symfony\Component\HttpFoundation\Response
     {
-        return parent::render($request, $exception);
+        if ($request->expectsJson()) {
+            return response()->json(['error' => 'Unauthenticated.'], 401);
+        }
+        if ($request->is('admin') || $request->is('admin/*')) {
+            return redirect()->guest(route('login'));
+        }
+        if ($request->is('client') || $request->is('client/*')) {
+            return redirect()->guest(route('member_login'));
+        }
+        return redirect()->guest(route('member_login'));
     }
 }

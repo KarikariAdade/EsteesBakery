@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
 
 // WEBSITE ROUTES
 Route::get('/', 'WebsiteController@home')->name('website.home');
@@ -35,9 +34,48 @@ Route::get('contact', 'WebsiteController@contact')->name('website.contact');
 
 Route::get('item/detail', 'WebsiteController@itemDetail')->name('website.item.detail');
 
-
 Route::get('cart', 'WebsiteController@cart')->name('website.cart.index');
 
-// ADMIN ROUTES
+Route::get('order', 'WebsiteController@checkout')->name('website.order.index');
+
+
+#--------------------------------------- Client Routes ----------------------------------
+
+
+
+#--------------------------------------- Client Auth ------------------------------------
+
+
+Route::get('client/signup', 'Auth\RegisterController@showMemberRegisterForm')->name('signup');
+
+Route::post('client/register', 'Auth\RegisterController@createMember')->name('client.register');
+
+Route::get('client/login', 'Auth\MemberLoginController@showMemberLoginForm')->name('member_login');
+
+Route::post('client/signin', 'Auth\MemberLoginController@MemberLogin')->name('login_member');
+
+#--------------------------------------- End Client Auth ---------------------------------
+
+
+Route::group(['middleware' => ['auth:member']], function(){
+
+    #------------------------------------ Client Dashboard ------------------------------
+
+	Route::get('client/dashboard', 'Client\PagesController@dashboard')->name('client.dashboard');
+
+	#------------------------------------- End Client Dashboard -------------------------
+
+});
+
+
+
+
+#------------------------------------------ ADMIN DASHBOARD ROUTES --------------------------
 
 Route::get('admin/dashboard', 'Admin\AdminPagesController@dashboard')->name('admin.dashboard');
+
+
+#----------------------------------------- Admin Profile Route ------------------------------
+
+Route::get('admin/dashboard/profile', 'Admin\ProfileController@index')->name('admin.profile.index');
+

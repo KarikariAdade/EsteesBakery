@@ -79,15 +79,32 @@
 								<li><a href="{{ route('website.cakes') }}">Cupcakes</a></li>
 							</ul>
 						</li>
-						
+
 						<li><a href="{{ route('website.gallery') }}">Gallery</a></li>
 						<li><a href="{{ route('website.contact') }}">Contact Us</a></li>
+
 						<li class="dropdown submenu">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
-							<ul class="dropdown-menu">
-								<li><a href="{{ route('website.cakes') }}">Login</a></li>
-								<li><a href="{{ route('website.cakes') }}">Sign Up</a></li>
+                            @if(!auth('member')->id())
+                            <ul class="dropdown-menu">
+								<li><a href="{{ route('member_login') }}">Login</a></li>
+								<li><a href="{{ route('signup') }}">Sign Up</a></li>
 							</ul>
+                            @else
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('client.dashboard') }}">Dashboard</a></li>
+                                <li>
+                                    <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                              style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </a>
+                                </li>
+                            </ul>
+                                @endif
 						</li>
 					</ul>
 				</div>

@@ -52,4 +52,9 @@ class WebsiteController extends Controller
     {
         return view('website.cart.index');
     }
+
+    public function checkout()
+    {        
+        return view('website.order.index');
+    }
 }
