@@ -31,7 +31,7 @@
 			<div class="container">
 				<div class="float-left">
 					<a href="tell:+18004567890"><i class="fa fa-phone" aria-hidden="true"></i> +233548876922</a>
-					<a href="mainto:info@cakebakery.com"><i class="fa fa-envelope" aria-hidden="true"></i> info@esteesbakery.com</a>
+					<a href=""><i class="fa fa-envelope" aria-hidden="true"></i> info@esteesbakery.com</a>
 				</div>
 				<div class="float-right">
 					<ul class="h_social list_style">
@@ -165,8 +165,8 @@
 						<div class="f_title">
 							<h3>Contact Info</h3>
 						</div>
-						<h4>(1800) 574 9687</h4>
-						<p>Justshiop Store <br>256, baker Street,, New Youk, 5245</p>
+						<h4>(+233) 548 876 922</h4>
+						<p>Estees Bakery <br> Plot 235, Block K, Agona, Ashanti</p>
 						<h5>cakebakery@contact.co.in</h5>
 					</aside>
 				</div>
